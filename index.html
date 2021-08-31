@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+    
+
+   <p style="color :red"> Problem-1: A Honeymoon Hotel Cost. If you stay 10 days ,it will cost 100 taka/day . If You stay 10 more days then they will offer 20% discount. 
+    After that if you stay 10 more days then the hotel authority will offer you 50% discount. </p>
+
+    <h2>Md. Fahad Badsha Shamim <br> WDD - 2nd batch </h2>
+
+    <span style="color: darkmagenta;">Your Total Hotel Bill with / Without discount =</span>
+    <script>
+     const totalhotelBill = (dayCharge, days) => {
+    let discount = 0;
+
+    if ( days <= 10) {
+        discount = 0;
+
+    return dayCharge * days ;
+
+    } else if ( days > 10 && days <=20) {
+        discount = 20;
+
+    return dayCharge * days - (dayCharge* days * discount) / 100 + 200 ;
+
+    }else if (days > 20 && days <=30) {
+        discount = 50;
+    }
+
+    return dayCharge * days - (dayCharge* days * discount) / 100 + 800;
+}
+
+
+document.write(totalhotelBill (100, 25));
+
+
+    </script>
+    <span>Taka</span>
+
+
+
+</body>
+</html>
